@@ -79,6 +79,9 @@ nav ul a:hover {
 .parallax-container .section {
     width: 100%;
 }
+.parallax img {
+  width: 100%;
+}
 .material-icons {
     display: inline-flex;
     vertical-align: middle;
@@ -117,19 +120,34 @@ nav ul a:hover {
     top: -1.5em;
     position: relative;
 }
+@media screen and (min-width: 1500px) {
+  #index-banner {
+      min-height: 500px;
+  }
+  .parallax-container .section {
+    position: absolute;
+    top: 10%;
+  }
+  .parallax img {
+    bottom: 50px;
+  }
+}
 @media only screen and (max-width: 992px) {
     .parallax-container .section {
         position: absolute;
         top: 40%;
     }
     #index-banner .section {
-        top: 10%;
+        top: 0;
     }
 }
 @media only screen and (max-width: 600px) {
-    #index-banner .section {
-        top: 0;
-    }
+  .parallax img {
+    width: 140%;
+  }
+  #index-banner .section {
+      left: 50px;
+  }
 }
 .icon-block {
     padding: 0 15px;
